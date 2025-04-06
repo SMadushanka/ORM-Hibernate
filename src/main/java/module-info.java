@@ -7,7 +7,7 @@ module lk.ijse.orm.ormhibernatefinalcw {
     requires com.jfoenix;
     requires javafx.controls;
     requires mysql.connector.java;
-
+    requires java.desktop;
 
 
     opens lk.ijse.orm.ormhibernatefinalcw.entity to org.hibernate.orm.core;
