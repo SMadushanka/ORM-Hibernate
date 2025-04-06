@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="pane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.orm.ormhibernatefinalcw.controller.admin.AdminController">
+   <children>
+      <ImageView fitHeight="108.0" fitWidth="118.0" layoutX="40.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/logo%20(2).png" />
+         </image>
+      </ImageView>
+      <Line endX="-100.0" endY="410.0" layoutX="253.0" layoutY="165.0" startX="-100.0" startY="-155.0" stroke="#fafafa" strokeWidth="1.5" />
+      <Line endX="-100.0" endY="410.0" layoutX="388.0" layoutY="165.0" startX="-100.0" startY="-155.0" stroke="#fafafa" strokeWidth="1.5" />
+      <Line endX="-100.0" endY="410.0" layoutX="523.0" layoutY="165.0" startX="-100.0" startY="-155.0" stroke="#fafafa" strokeWidth="1.5" />
+      <Line endX="-100.0" endY="410.0" layoutX="655.0" layoutY="165.0" startX="-100.0" startY="-155.0" stroke="#fafafa" strokeWidth="1.5" />
+      <Line endX="-100.0" endY="410.0" layoutX="788.0" layoutY="157.0" startX="-100.0" startY="-155.0" stroke="#fafafa" strokeWidth="1.5" />
+      <Line endX="-100.0" endY="410.0" layoutX="917.0" layoutY="165.0" startX="-100.0" startY="-155.0" stroke="#fafafa" strokeWidth="1.5" />
+      <Line endX="100.0" layoutX="10.0" layoutY="10.0" startX="-100.0" />
+      <Line endX="621.300048828125" endY="7.62939453125E-6" layoutX="233.0" layoutY="155.0" startX="-100.0" stroke="#fafafa" strokeWidth="1.5" />
+      <Line endX="621.300048828125" endY="7.62939453125E-6" layoutX="232.0" layoutY="291.0" startX="-204.10000610351562" stroke="#fafafa" strokeWidth="1.5" />
+      <Line endX="621.300048828125" endY="7.62939453125E-6" layoutX="231.0" layoutY="438.0" startX="-204.10000610351562" stroke="#fafafa" strokeWidth="1.5" />
+      <Circle fill="#6366f1" layoutX="195.0" layoutY="249.0" radius="41.0" stroke="TRANSPARENT" strokeType="INSIDE">
+         <effect>
+            <BoxBlur height="255.0" iterations="3" width="255.0" />
+         </effect>
+      </Circle>
+      <Circle fill="#ff9500" layoutX="667.0" layoutY="415.0" radius="63.0" stroke="TRANSPARENT" strokeType="INSIDE">
+         <effect>
+            <BoxBlur height="255.0" iterations="3" width="255.0" />
+         </effect>
+      </Circle>
+      <Text fill="#333333" layoutX="118.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mental ">
+         <font>
+            <Font name="Poppins Bold" size="36.0" />
+         </font>
+      </Text>
+      <Text fill="#333333" layoutX="492.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Therapy Center">
+         <font>
+            <Font name="Poppins Bold" size="36.0" />
+         </font>
+      </Text>
+      <Pane layoutX="260.0" layoutY="176.0" prefHeight="60.0" prefWidth="230.0" style="-fx-background-color: #6366f1; -fx-border-radius: 5px; -fx-background-radius: 5px; -fx-rotate: -0.5deg;">
+         <children>
+            <Text fill="#fcfcfc" layoutX="13.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wellness &amp;" textAlignment="CENTER">
+               <font>
+                  <Font name="Poppins Bold" size="36.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Text fill="#333333" layoutX="41.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A compassionate and supportive space for healing, personal growth, ">
+         <font>
+            <Font name="Poppins Medium" size="12.0" />
+         </font>
+      </Text>
+      <Text fill="#333333" layoutX="462.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="and holistic mental well-being through therapy and guidance.">
+         <font>
+            <Font name="Poppins Medium" size="12.0" />
+         </font>
+      </Text>
+      <JFXButton layoutX="61.0" layoutY="526.0" onAction="#gotoLandingPage" style="-fx-border-color: #333;" text="Back">
+         <font>
+            <Font name="Poppins Medium" size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="342.0" layoutY="318.0" onAction="#gotoTherepistView" prefHeight="89.0" prefWidth="178.0" style="-fx-background-color: #fff; -fx-border-color: #6366f1;" text="Manage Therepist">
+         <font>
+            <Font name="Poppins Medium" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="545.0" layoutY="318.0" onAction="#gotoTherepyProgrammesView" prefHeight="90.0" prefWidth="194.0" style="-fx-background-color: #fff; -fx-border-color: #6366f1;" text="Therepy Programmes">
+         <font>
+            <Font name="Poppins Medium" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="139.0" layoutY="318.0" onAction="#addNewAdmin" prefHeight="89.0" prefWidth="178.0" style="-fx-background-color: #fff; -fx-border-color: #6366f1;" text="Add New Admin">
+         <font>
+            <Font name="Poppins Medium" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>
