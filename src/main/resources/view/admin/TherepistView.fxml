@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="pane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.orm.ormhibernatefinalcw.controller.admin.TherepistController">
+   <children>
+      <ImageView fitHeight="108.0" fitWidth="118.0" layoutX="40.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/logo%20(2).png" />
+         </image>
+      </ImageView>
+      <Line endX="-100.0" endY="410.0" layoutX="253.0" layoutY="165.0" startX="-100.0" startY="-155.0" stroke="#fafafa" strokeWidth="1.5" />
+      <Line endX="-100.0" endY="410.0" layoutX="388.0" layoutY="165.0" startX="-100.0" startY="-155.0" stroke="#fafafa" strokeWidth="1.5" />
+      <Line endX="-100.0" endY="410.0" layoutX="523.0" layoutY="165.0" startX="-100.0" startY="-155.0" stroke="#fafafa" strokeWidth="1.5" />
+      <Line endX="-100.0" endY="410.0" layoutX="655.0" layoutY="165.0" startX="-100.0" startY="-155.0" stroke="#fafafa" strokeWidth="1.5" />
+      <Line endX="-100.0" endY="410.0" layoutX="788.0" layoutY="157.0" startX="-100.0" startY="-155.0" stroke="#fafafa" strokeWidth="1.5" />
+      <Line endX="-100.0" endY="410.0" layoutX="917.0" layoutY="165.0" startX="-100.0" startY="-155.0" stroke="#fafafa" strokeWidth="1.5" />
+      <Line endX="100.0" layoutX="10.0" layoutY="10.0" startX="-100.0" />
+      <Line endX="621.300048828125" endY="7.62939453125E-6" layoutX="195.0" layoutY="177.0" startX="-100.0" stroke="#fafafa" strokeWidth="1.5" />
+      <Line endX="621.300048828125" endY="7.62939453125E-6" layoutX="232.0" layoutY="291.0" startX="-204.10000610351562" stroke="#fafafa" strokeWidth="1.5" />
+      <Line endX="621.300048828125" endY="7.62939453125E-6" layoutX="231.0" layoutY="438.0" startX="-204.10000610351562" stroke="#fafafa" strokeWidth="1.5" />
+      <Circle fill="#ff9500" layoutX="667.0" layoutY="415.0" radius="63.0" stroke="TRANSPARENT" strokeType="INSIDE">
+         <effect>
+            <BoxBlur height="255.0" iterations="3" width="255.0" />
+         </effect>
+      </Circle>
+      <Text fill="#333333" layoutX="160.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mental ">
+         <font>
+            <Font name="Poppins Bold" size="36.0" />
+         </font>
+      </Text>
+      <Text fill="#333333" layoutX="534.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Therapy Center">
+         <font>
+            <Font name="Poppins Bold" size="36.0" />
+         </font>
+      </Text>
+      <Pane layoutX="302.0" layoutY="47.0" prefHeight="60.0" prefWidth="230.0" style="-fx-background-color: #6366f1; -fx-border-radius: 5px; -fx-background-radius: 5px; -fx-rotate: -0.5deg;">
+         <children>
+            <Text fill="#fcfcfc" layoutX="13.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wellness &amp;" textAlignment="CENTER">
+               <font>
+                  <Font name="Poppins Bold" size="36.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Text fill="#333333" layoutX="230.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manages client sessions, appointments, and therapy notes efficiently.">
+         <font>
+            <Font name="Poppins Medium" size="12.0" />
+         </font>
+      </Text>
+      <JFXButton layoutX="61.0" layoutY="526.0" onAction="#gotoBack" style="-fx-border-color: #333;" text="Back">
+         <font>
+            <Font name="Poppins Medium" size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Circle fill="#6366f1" layoutX="195.0" layoutY="249.0" radius="41.0" stroke="TRANSPARENT" strokeType="INSIDE">
+         <effect>
+            <BoxBlur height="255.0" iterations="3" width="255.0" />
+         </effect>
+      </Circle>
+      <TextField fx:id="nameTxt" layoutX="122.0" layoutY="194.0" prefHeight="42.0" prefWidth="329.0" style="-fx-border-color: #B5B8C6; -fx-background-color: #fafafa; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-padding: 0 10px;">
+         <font>
+            <Font name="Poppins Medium" size="12.0" />
+         </font>
+      </TextField>
+      <Text fill="#333333" layoutX="123.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Therepist Name">
+         <font>
+            <Font name="Poppins Medium" size="12.0" />
+         </font>
+      </Text>
+      <Text fill="#333333" layoutX="503.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Programme">
+         <font>
+            <Font name="Poppins Medium" size="12.0" />
+         </font>
+      </Text>
+      <JFXComboBox layoutX="-219.0" layoutY="33.0" />
+      <JFXComboBox fx:id="programmeCmb" layoutX="503.0" layoutY="194.0" onAction="#clickCmb" prefHeight="42.0" prefWidth="251.0" promptText="Select Programme" style="-fx-background-color: #fafafa; -fx-border-color: #B5B8C6; -fx-padding: 0 10px; -fx-border-radius: 5px;" />
+      <TextField fx:id="contactTxt" layoutX="122.0" layoutY="259.0" prefHeight="42.0" prefWidth="182.0" style="-fx-border-color: #B5B8C6; -fx-background-color: #fafafa; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-padding: 0 10px;">
+         <font>
+            <Font name="Poppins Medium" size="12.0" />
+         </font>
+      </TextField>
+      <Text fill="#333333" layoutX="123.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Therepist Contact NO">
+         <font>
+            <Font name="Poppins Medium" size="12.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="saveBtn" layoutX="329.0" layoutY="259.0" onAction="#addTherepist" prefHeight="42.0" prefWidth="137.0" style="-fx-background-color: #6366f1;" text="Add Therepist" textFill="#fcfcfc">
+         <font>
+            <Font name="Poppins Medium" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="updateBtn" layoutX="473.0" layoutY="259.0" onAction="#updateTherepist" prefHeight="42.0" prefWidth="137.0" style="-fx-background-color: #6366f1;" text="Update Therepist" textFill="#fcfcfc">
+         <font>
+            <Font name="Poppins Medium" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="deleteBtn" layoutX="617.0" layoutY="259.0" onAction="#deleteTherepist" prefHeight="42.0" prefWidth="137.0" style="-fx-background-color: #6366f1;" text="Delete Therepist" textFill="#fcfcfc">
+         <font>
+            <Font name="Poppins Medium" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="therepistTbl" layoutX="123.0" layoutY="326.0" onMouseClicked="#clickTbl" prefHeight="200.0" prefWidth="631.0">
+         <columns>
+            <TableColumn fx:id="idCol" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="nameCol" prefWidth="187.99993896484375" text="Name" />
+            <TableColumn fx:id="programmeCol" prefWidth="187.99993896484375" text="Programme" />
+            <TableColumn fx:id="contactCol" prefWidth="179.20000000000005" text="Contact" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
