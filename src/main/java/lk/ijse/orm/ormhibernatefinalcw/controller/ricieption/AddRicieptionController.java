@@ -5,8 +5,11 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.AnchorPane;
 import lk.ijse.orm.ormhibernatefinalcw.dto.RicieptionDto;
+//import lk.ijse.orm.ormhibernatefinalcw.dao.DaoFactory.Type;
+import lk.ijse.orm.ormhibernatefinalcw.service.ServiceFactory.Type;
 import lk.ijse.orm.ormhibernatefinalcw.service.ServiceFactory;
 import lk.ijse.orm.ormhibernatefinalcw.service.custom.RicieptionService;
 import lk.ijse.orm.ormhibernatefinalcw.utils.WindowUtils;
@@ -14,6 +17,7 @@ import lk.ijse.orm.ormhibernatefinalcw.utils.WindowUtils;
 public class AddRicieptionController {
 
     RicieptionService ricieptionService = (RicieptionService) ServiceFactory.getInstance().getService(Type.RICIEPTION);
+
     @FXML
     private TextField emailTxt;
 
@@ -32,11 +36,11 @@ public class AddRicieptionController {
     void validateAdmin(ActionEvent event) throws Exception{
 
         if (emailTxt.getText().isEmpty()) {
-            new Alert(Alert.AlertType.ERROR, "Email Cannot be null !").show();
+            new Alert(AlertType.ERROR, "Email Cannot be null !").show();
         }
 
         if (passwordTxt.getText().isEmpty()) {
-            new Alert(Alert.AlertType.ERROR, "Password Cannot be null !").show();
+            new Alert(AlertType.ERROR, "Password Cannot be null !").show();
         }
 
         Boolean resp = ricieptionService.addNewRicieption(
@@ -46,9 +50,9 @@ public class AddRicieptionController {
                 ));
 
         if (resp) {
-            new Alert(Alert.AlertType.INFORMATION,"Ricieption Addedd Success !").show();
+            new Alert(AlertType.INFORMATION,"Ricieption Addedd Success !").show();
         } else {
-            new Alert(Alert.AlertType.ERROR,"Ricieption Added Failed !").show();
+            new Alert(AlertType.ERROR,"Ricieption Added Failed !").show();
         }
 
     }
