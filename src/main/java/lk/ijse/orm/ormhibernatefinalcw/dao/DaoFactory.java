@@ -12,7 +12,7 @@ public class DaoFactory {
         return daoFactory != null ? daoFactory : new DaoFactory();
     }
 
-    public AdminDaoImpl getDao(Type type) {
+    public SuperDao getDao(Type type) {
         switch (type) {
             case ADMIN:
                 return new AdminDaoImpl();
