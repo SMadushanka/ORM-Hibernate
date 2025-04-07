@@ -1,6 +1,7 @@
 package lk.ijse.orm.ormhibernatefinalcw.service.custom.impl;
 
 import lk.ijse.orm.ormhibernatefinalcw.dao.DaoFactory;
+import lk.ijse.orm.ormhibernatefinalcw.dao.DaoFactory.Type;
 import lk.ijse.orm.ormhibernatefinalcw.dao.custom.ProgrammeDao;
 import lk.ijse.orm.ormhibernatefinalcw.dao.custom.TherepistDao;
 import lk.ijse.orm.ormhibernatefinalcw.dto.ProgrammeDto;
@@ -12,7 +13,7 @@ import lk.ijse.orm.ormhibernatefinalcw.service.custom.TherepistService;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TherepistServiceImpl implements TherepistService {
+public class TherepistServiceImpl implements TherepistService{
 
     TherepistDao therepistDao = (TherepistDao) DaoFactory.getInstance().getDao(Type.THEREPIST);
     ProgrammeDao programmeDao = (ProgrammeDao) DaoFactory.getInstance().getDao(Type.PROGRAMME);
@@ -92,6 +93,4 @@ public class TherepistServiceImpl implements TherepistService {
 
         return programmeDto;
     }
-
-
 }
