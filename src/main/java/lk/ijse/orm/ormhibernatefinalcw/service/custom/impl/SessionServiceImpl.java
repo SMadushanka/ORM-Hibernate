@@ -43,7 +43,7 @@ public class SessionServiceImpl implements SessionService {
     public ArrayList<SessionDto> getAll() {
 
         ArrayList<SessionDto>sessionDtos = new ArrayList<>();
-        List<ThereSession> thereSessions = sessionDao.getAll();
+        List<ThereSession>thereSessions = sessionDao.getAll();
 
         for (ThereSession thereSession : thereSessions){
             Therepist therepist = thereSession.getTherepist();
