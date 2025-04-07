@@ -1,16 +1,19 @@
 package lk.ijse.orm.ormhibernatefinalcw.service.custom;
 
 import lk.ijse.orm.ormhibernatefinalcw.dto.PatcientDto;
+import lk.ijse.orm.ormhibernatefinalcw.service.SuperService;
 
 import java.util.ArrayList;
 
-public interface PatcientService {
-    boolean addPatcient(PatcientDto patcientDto) throws Exception;
+public interface PatcientService extends SuperService {
 
     PatcientDto search(int id);
 
-    boolean deletePatcient(int id) throws Exception;
+    boolean addPatcient(PatcientDto patcientDto) throws Exception;
 
     ArrayList<PatcientDto> getAll();
+
+    boolean deletePatcient(int id) throws Exception;
 }
+
 
