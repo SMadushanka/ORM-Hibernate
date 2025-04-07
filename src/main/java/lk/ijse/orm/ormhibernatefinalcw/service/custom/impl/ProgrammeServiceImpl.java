@@ -39,7 +39,7 @@ public class ProgrammeServiceImpl implements ProgrammeService {
     @Override
     public ArrayList<ProgrammeDto> getAll() {
         ArrayList<ProgrammeDto>programmeDtos = new ArrayList<>();
-        List<Programme> programmes = programmeDao.getAll();
+        List<Programme>programmes = programmeDao.getAll();
 
         for (Programme programme  :programmes){
             programmeDtos.add(new ProgrammeDto(
@@ -65,4 +65,3 @@ public class ProgrammeServiceImpl implements ProgrammeService {
         return programmeDto;
     }
 }
-
