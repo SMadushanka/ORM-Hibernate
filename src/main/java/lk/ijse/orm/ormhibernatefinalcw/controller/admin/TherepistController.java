@@ -2,6 +2,7 @@ package lk.ijse.orm.ormhibernatefinalcw.controller.admin;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -11,6 +12,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -18,6 +20,8 @@ import lk.ijse.orm.ormhibernatefinalcw.dto.ProgrammeDto;
 import lk.ijse.orm.ormhibernatefinalcw.dto.ThereoistDto;
 import lk.ijse.orm.ormhibernatefinalcw.dto.tm.TherepyTM;
 import lk.ijse.orm.ormhibernatefinalcw.service.ServiceFactory;
+//import lk.ijse.orm.ormhibernatefinalcw.dao.DaoFactory.Type;
+import lk.ijse.orm.ormhibernatefinalcw.service.ServiceFactory.Type;
 import lk.ijse.orm.ormhibernatefinalcw.service.custom.ProgrammeService;
 import lk.ijse.orm.ormhibernatefinalcw.service.custom.TherepistService;
 import lk.ijse.orm.ormhibernatefinalcw.utils.WindowUtils;
@@ -219,6 +223,7 @@ public class TherepistController implements Initializable {
 
         therepistTbl.setItems(theTMS);
     }
+
 
     void clearFields(){
         nameTxt.setText("");
