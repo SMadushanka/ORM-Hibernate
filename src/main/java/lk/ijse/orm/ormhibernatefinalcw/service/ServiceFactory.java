@@ -1,5 +1,6 @@
 package lk.ijse.orm.ormhibernatefinalcw.service;
 
+import lk.ijse.orm.ormhibernatefinalcw.dao.DaoFactory;
 import lk.ijse.orm.ormhibernatefinalcw.service.custom.impl.*;
 
 public class ServiceFactory {
@@ -11,13 +12,13 @@ public class ServiceFactory {
         return serviceFactory != null ? serviceFactory : new ServiceFactory();
     }
 
-    public AdminServiceImpl getService(Type type){
+    public SuperService getService(Type type){
         switch (type){
             case ADMIN :
                 return new AdminServiceImpl();
 
             case RICIEPTION:
-               return new RicieptionServiceImpl();
+                return new RicieptionServiceImpl();
 
             case PATCIENT:
                 return new PatcientServiceImpl();
@@ -39,7 +40,11 @@ public class ServiceFactory {
         }
     }
 
-    public enum Type{
+    public enum Type {
         ADMIN,RICIEPTION,PATCIENT,PROGRAMME,THEREPIST,THE_SESSION,PAYMENT
     }
+
+//    public enum Type{
+//        ADMIN,RICIEPTION,PATCIENT,PROGRAMME,THEREPIST,THE_SESSION,PAYMENT
+//    }
 }
