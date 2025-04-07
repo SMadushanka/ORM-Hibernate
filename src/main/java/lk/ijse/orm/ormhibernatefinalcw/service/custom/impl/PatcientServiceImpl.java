@@ -77,4 +77,3 @@ public class PatcientServiceImpl implements PatcientService {
     }
 
 }
-
