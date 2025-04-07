@@ -8,12 +8,15 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import lk.ijse.orm.ormhibernatefinalcw.dto.AdminDto;
 import lk.ijse.orm.ormhibernatefinalcw.service.ServiceFactory;
+//import lk.ijse.orm.ormhibernatefinalcw.dao.DaoFactory.Type;
+import lk.ijse.orm.ormhibernatefinalcw.service.ServiceFactory.Type;
 import lk.ijse.orm.ormhibernatefinalcw.service.custom.AdminService;
 import lk.ijse.orm.ormhibernatefinalcw.utils.WindowUtils;
 
 public class AddAdminController {
 
     AdminService adminService = (AdminService) ServiceFactory.getInstance().getService(Type.ADMIN);
+
     @FXML
     private TextField emailTxt;
 
