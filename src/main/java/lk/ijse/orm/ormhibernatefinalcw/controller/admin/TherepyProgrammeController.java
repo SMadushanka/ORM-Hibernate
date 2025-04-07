@@ -1,5 +1,6 @@
 package lk.ijse.orm.ormhibernatefinalcw.controller.admin;
 
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -101,7 +102,7 @@ public class TherepyProgrammeController implements Initializable {
     }
 
     @FXML
-    void updtaeProgramme(ActionEvent event)  {
+    void updtaeProgramme(ActionEvent event) {
         boolean resp = programmeService.updateProgramme(new ProgrammeDto(
                 nameTxt.getText(),
                 durationTxt.getText(),
@@ -144,7 +145,7 @@ public class TherepyProgrammeController implements Initializable {
     }
 
     void getAll(){
-        ArrayList<ProgrammeDto> programmeDtos = programmeService.getAll();
+        ArrayList<ProgrammeDto>programmeDtos = programmeService.getAll();
         ObservableList<ProgrammeTM> proTMS = FXCollections.observableArrayList();
 
         for (ProgrammeDto programmeDto : programmeDtos){
