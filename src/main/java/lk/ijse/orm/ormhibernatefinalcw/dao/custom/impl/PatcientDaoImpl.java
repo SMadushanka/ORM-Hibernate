@@ -53,6 +53,7 @@ public class PatcientDaoImpl implements PatcientDao {
         }
     }
 
+    
     @Override
     public boolean deleteByPK(String pk) throws Exception {
         Session session = sessionFactoryConfiguration.getSession();
