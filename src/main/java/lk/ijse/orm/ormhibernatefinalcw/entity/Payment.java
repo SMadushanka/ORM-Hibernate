@@ -13,6 +13,10 @@ import java.time.LocalDate;
 @Data
 @Table(name = "payment")
 public class Payment {
+    public Payment(int id2, LocalDate date2, Double amount2, int patcient2, Programme programme2) {
+        //TODO Auto-generated constructor stub
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;

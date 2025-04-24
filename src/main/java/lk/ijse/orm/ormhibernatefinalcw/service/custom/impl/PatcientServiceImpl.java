@@ -76,4 +76,18 @@ public class PatcientServiceImpl implements PatcientService {
         return patcientDao.deleteByPK(String.valueOf(id));
     }
 
+    @Override
+    public int saves(PatcientDto patcientDto) throws Exception{
+        Programme programme = programmeDao.findById(patcientDto.getProgrammeDto().getId());
+        Patcient patcient = new Patcient();
+
+        patcient.setId(patcientDto.getId());
+        patcient.setName(patcientDto.getName());
+        patcient.setProgramme(programme);
+        patcient.setEmail(patcientDto.getEmail());
+        patcient.setContact(patcientDto.getContact());
+
+        return patcientDao.saves(patcient);
+    }
+
 }
