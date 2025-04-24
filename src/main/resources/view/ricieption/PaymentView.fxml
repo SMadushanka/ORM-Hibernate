@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.orm.ormhibernatefinalcw.controller.ricieption.PaymentController">
+<AnchorPane fx:id="pane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.orm.ormhibernatefinalcw.controller.ricieption.PaymentController">
    <children>
       <ImageView fitHeight="108.0" fitWidth="118.0" layoutX="40.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -22,7 +22,7 @@
       </ImageView>
       <Line endX="-100.0" endY="410.0" layoutX="253.0" layoutY="165.0" startX="-100.0" startY="-155.0" stroke="#fafafa" strokeWidth="1.5" />
       <Line endX="-100.0" endY="410.0" layoutX="388.0" layoutY="165.0" startX="-100.0" startY="-155.0" stroke="#fafafa" strokeWidth="1.5" />
-      <Line fx:id="pane" endX="-100.0" endY="410.0" layoutX="523.0" layoutY="165.0" startX="-100.0" startY="-155.0" stroke="#fafafa" strokeWidth="1.5" />
+      <Line endX="-100.0" endY="410.0" layoutX="523.0" layoutY="165.0" startX="-100.0" startY="-155.0" stroke="#fafafa" strokeWidth="1.5" />
       <Line endX="-100.0" endY="410.0" layoutX="655.0" layoutY="165.0" startX="-100.0" startY="-155.0" stroke="#fafafa" strokeWidth="1.5" />
       <Line endX="-100.0" endY="410.0" layoutX="788.0" layoutY="157.0" startX="-100.0" startY="-155.0" stroke="#fafafa" strokeWidth="1.5" />
       <Line endX="-100.0" endY="410.0" layoutX="917.0" layoutY="165.0" startX="-100.0" startY="-155.0" stroke="#fafafa" strokeWidth="1.5" />
