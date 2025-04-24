@@ -91,7 +91,7 @@
             <Font name="Poppins Medium" size="12.0" />
          </font>
       </Text>
-      <Text fill="#333333" layoutX="555.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Session Name">
+      <Text fill="#333333" layoutX="555.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Therepist Name">
          <font>
             <Font name="Poppins Medium" size="12.0" />
          </font>
