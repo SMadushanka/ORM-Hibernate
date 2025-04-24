@@ -73,42 +73,61 @@ public class PatcientController implements Initializable {
 
     @FXML
     void addPatcient(ActionEvent event) throws Exception{
+
         ProgrammeDto programmeDto = programmeService.search(id);
-        PatcientDto patcientDto = new PatcientDto();
+        int paID = patcientService.saves(new PatcientDto(nameTxt.getText(),proCmb.getSelectionModel().getSelectedItem(),emailTxt.getText(),Integer.parseInt(contactTxt.getText())));
+        boolean resp = paymentService.savePayment(new PaymentDto(
+                LocalDate.now(),
+                Double.parseDouble(amountTxt.getText()),
+                paID,
+                programmeDto.getId()
+        ));
 
-        patcientDto.setName(nameTxt.getText());
-        patcientDto.setProgrammeDto(programmeDto);
-        patcientDto.setEmail(emailTxt.getText());
-        patcientDto.setContact(Integer.parseInt(contactTxt.getText()));
-
-        boolean resp = patcientService.addPatcient(patcientDto);
-
-        if (resp){
-            PaymentDto paymentDto = new PaymentDto();
-
-            if (patcientDto != null){
-
-                PatcientDto patcientDto1 = patcientService.search(patcientDto.getId());
-
-                paymentDto.setDate(LocalDate.now());
-                paymentDto.setAmount(Double.parseDouble(amountTxt.getText()));
-                paymentDto.setPatcient(patcientDto1);
-                paymentDto.setProgramme(programmeDto);
-
-                boolean nextResp = paymentService.savePayment(paymentDto);
-
-                if (nextResp){
-                    new Alert(Alert.AlertType.INFORMATION,"Complete Registraion !").show();
-                    clearFields();
-                    getAllProgrammes();
-                    getAll();
-                }else {
-                    new Alert(Alert.AlertType.ERROR,"Something Went Wrong!").show();
-                }
-            }
-        }else {
-            new Alert(Alert.AlertType.ERROR,"Something Went Wrong!").show();
+        if (resp) {
+            new Alert(Alert.AlertType.INFORMATION,"Complete Registraion !").show();
+            clearFields();
+            getAll();
+            getAllProgrammes();
+        } else {
+            new Alert(Alert.AlertType.ERROR,"Something Went Wrong").show();
         }
+
+        // ProgrammeDto programmeDto = programmeService.search(id);
+        // PatcientDto patcientDto = new PatcientDto();
+
+        // patcientDto.setName(nameTxt.getText());
+        // patcientDto.setProgrammeDto(programmeDto);
+        // patcientDto.setEmail(emailTxt.getText());
+        // patcientDto.setContact(Integer.parseInt(contactTxt.getText()));
+
+        // boolean resp = patcientService.addPatcient(patcientDto);
+
+        // if (resp){
+        //     PaymentDto paymentDto = new PaymentDto();
+
+        //     if (patcientDto != null){
+
+        //         PatcientDto patcientDto1 = patcientService.search(patcientDto.getId());
+
+        //         paymentDto.setDate(LocalDate.now());
+        //         paymentDto.setAmount(Double.parseDouble(amountTxt.getText()));
+        //         paymentDto.setPatcient(patcientDto1);
+        //         paymentDto.setProgramme(programmeDto);
+
+        //         boolean nextResp = paymentService.savePayment(paymentDto);
+
+        //         if (nextResp){
+        //             new Alert(Alert.AlertType.INFORMATION,"Complete Registraion !").show();
+        //             clearFields();
+        //             getAllProgrammes();
+        //             getAll();
+        //         }else {
+        //             new Alert(Alert.AlertType.ERROR,"Something Went Wrong!").show();
+        //         }
+        //     }
+        // }else {
+        //     new Alert(Alert.AlertType.ERROR,"Something Went Wrong!").show();
+        // }
     }
 
     @FXML
