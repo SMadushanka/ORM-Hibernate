@@ -14,6 +14,8 @@ public interface PatcientService extends SuperService {
     ArrayList<PatcientDto> getAll();
 
     boolean deletePatcient(int id) throws Exception;
+
+    int saves(PatcientDto patcientDto) throws Exception;
 }
 
 
