@@ -20,22 +20,14 @@ public class PaymentServiceImpl implements PaymentService {
     @Override
     public boolean savePayment(PaymentDto paymentDto) throws Exception{
 
-        Programme programme = programmeDao.findById(paymentDto.getProgramme().getId());
-        Patcient patcient = patcientDao.findById(paymentDto.getPatcient().getId());
-        Payment payment = new Payment();
+        Programme programme = programmeDao.findById(paymentDto.getProgramme());
 
-        payment.setId(paymentDto.getId());
-        payment.setDate(paymentDto.getDate());
-        payment.setAmount(paymentDto.getAmount());
-        payment.setPatcient(patcient);
-        payment.setProgramme(programme);
-
-        boolean resp = paymentDao.save(payment);
-
-        if (resp){
-            return true;
-        }else {
-            return false;
-        }
+        return paymentDao.save(new Payment(
+                paymentDto.getId(),
+                paymentDto.getDate(),
+                paymentDto.getAmount(),
+                paymentDto.getPatcient(),
+                programme
+        ));
     }
 }
